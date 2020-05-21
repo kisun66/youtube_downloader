@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSY 유튜브 다운로더</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        @font-face {
+            font-family: NanumSquareL;
+            src: url("../static/font/NanumSquareL.ttf");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contents">
+        <h1>엄청 빠른 유튜브 동영상 다운로더</h1>
+
+        <form action="scan" id="scan_form">
+            <input type="text" placeholder="주소입력" name="url"><br>
+            <!-- <input type="submit" value="스캔" id="scan"> -->
+        </form>
+
+        {% if url == None %}
+        <div class="button">
+            <button id="scan">스캔</button>
+        </div>
+        {% else %}
+        <div class="button">
+            <button id="scan">스캔</button>
+            <button id="download">다운로드</button>
+        </div>
+        <form action="download" method="POST" id="download_form">
+            <input type="text" name="filename" value="{{filename}}" style="display:none">
+            <!-- <input type="submit" value="다운로드"> -->
+        </form>
+        <h3>{{title}}</h3>
+        <div><img src="{{thumbnail_url}}" alt="" class="img"></div>
+        {% endif %}
+    </div>
+
+    <div class="loading_"><img src="../static/img/loading.png" alt=""></div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
+</html>

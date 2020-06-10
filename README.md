@@ -8,3 +8,6 @@ pytube를 이용한 플라스크 기반 유튜브 동영상 다운로드 사이�
 그리고 사이트에는 동영상 제목과 썸네일이 띄워지고 다운로드 버튼이 새로 생깁니다.
 
 다운로드 버튼을 누르면 다운로드가 시작됩니다.
+
+## Screenshot
+<img width="100%" alt="스크린샷 2020-06-11 00 14 01" src="https://user-images.githubusercontent.com/48434665/84285526-8a200180-ab78-11ea-90fc-6fd6e83a8931.png">
